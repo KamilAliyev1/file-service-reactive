@@ -1,0 +1,28 @@
+server:
+  port: 8083
+
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      database: files
+      port: 27017
+      host: localhost
+
+
+
+files:
+  allowed:
+  - png
+  - jpeg
+  - txt
+  - jpg
+  - docx
+
+jwt:
+  issuer: localhost:9000
+  validateUrl: http://127.0.0.1:9000/tokens/validate
+  jwkUri: http://127.0.0.1:9000/jwk
+
